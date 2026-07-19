@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Maven Project</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+            background:
+                    linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+            overflow-x:hidden;
+            overflow-y:auto;
+            color:white;
+            padding:40px 0;
+        }
+
+        body::before{
+            content:'';
+            position:absolute;
+            width:500px;
+            height:500px;
+            background:#22c55e;
+            filter:blur(180px);
+            opacity:.18;
+            top:-120px;
+            right:-120px;
+        }
+
+        body::after{
+            content:'';
+            position:absolute;
+            width:450px;
+            height:450px;
+            background:#3b82f6;
+            filter:blur(180px);
+            opacity:.15;
+            bottom:-120px;
+            left:-120px;
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            padding:50px;
+            border-radius:28px;
+            background:rgba(255,255,255,.08);
+            backdrop-filter:blur(18px);
+            border:1px solid rgba(255,255,255,.15);
+            box-shadow:0 20px 60px rgba(0,0,0,.35);
+            text-align:center;
+            z-index:1;
+            position:relative;
+        }
+
+        .badge{
+            display:inline-block;
+            padding:10px 22px;
+            border-radius:40px;
+            background:#22c55e;
+            color:#032c12;
+            font-weight:700;
+            margin-bottom:25px;
+            animation:pulse 2s infinite;
+        }
+
+        @keyframes pulse{
+            0%{transform:scale(1);}
+            50%{transform:scale(1.05);}
+            100%{transform:scale(1);}
+        }
+
+        h1{
+            font-size:4rem;
+            font-weight:700;
+            line-height:1.15;
+            margin-bottom:20px;
+        }
+
+        .green{
+            color:#4ade80;
+        }
+
+        .description{
+            max-width:760px;
+            margin:auto;
+            font-size:1.15rem;
+            color:#d6dbe6;
+            line-height:1.8;
+        }
+
+        .info{
+            margin-top:35px;
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:18px;
+        }
+
+        .info-card{
+            background:rgba(255,255,255,.06);
+            padding:18px;
+            border-radius:18px;
+            text-align:left;
+            border:1px solid rgba(255,255,255,.08);
+        }
+
+        .info-card strong{
+            color:#4ade80;
+        }
+
+        .features{
+            margin-top:40px;
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:22px;
+        }
+
+        .feature{
+            padding:28px 20px;
+            border-radius:20px;
+            background:rgba(255,255,255,.07);
+            transition:.35s;
+            border:1px solid rgba(255,255,255,.08);
+        }
+
+        .feature:hover{
+            transform:translateY(-8px);
+            background:rgba(255,255,255,.12);
+        }
+
+        .feature h2{
+            margin:15px 0;
+            color:white;
+        }
+
+        .feature p{
+            color:#cbd5e1;
+            line-height:1.7;
+        }
+
+        .icon{
+            font-size:45px;
+        }
+
+        .buttons{
+            margin-top:45px;
+            display:flex;
+            justify-content:center;
+            gap:18px;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            text-decoration:none;
+            padding:14px 28px;
+            border-radius:12px;
+            color:white;
+            font-weight:600;
+            transition:.3s;
+        }
+
+        .green-btn{
+            background:#22c55e;
+        }
+
+        .green-btn:hover{
+            background:#16a34a;
+        }
+
+        .blue-btn{
+            background:#2563eb;
+        }
+
+        .blue-btn:hover{
+            background:#1d4ed8;
+        }
+
+        footer{
+            margin-top:45px;
+            color:#94a3b8;
+            font-size:.95rem;
+        }
+
+        @media(max-width:850px){
+
+            h1{
+                font-size:2.8rem;
+            }
+
+            .features{
+                grid-template-columns:1fr;
+            }
+
+            .info{
+                grid-template-columns:1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="badge">
+        🟢 Spring Boot Server Online
+    </div>
+
+    <h1>
+
+        Spring Boot
+
+        <span class="green">
+
+            Maven Project
+
+        </span>
+
+    </h1>
+
+    <p class="description">
+
+        A modern web application developed using <strong>Spring Boot</strong>,
+        <strong>Apache Maven</strong> and <strong>Java 21</strong>.
+        This project demonstrates successful project generation,
+        dependency management, application execution and GitHub integration.
+
+    </p>
+
+    <div class="info">
+
+        <div class="info-card">
+
+            <strong>Project</strong><br>
+
+            springboot-demo
+
+        </div>
+
+        <div class="info-card">
+
+            <strong>Framework</strong><br>
+
+            Spring Boot 4.1.0
+
+        </div>
+
+        <div class="info-card">
+
+            <strong>Build Tool</strong><br>
+
+            Apache Maven
+
+        </div>
+
+        <div class="info-card">
+
+            <strong>Java Version</strong><br>
+
+            Java 21
+
+        </div>
+
+    </div>
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="icon">🌱</div>
+
+            <h2>Spring Boot</h2>
+
+            <p>
+
+                Rapid application development with embedded Tomcat,
+                dependency injection and auto configuration.
+
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="icon">🛠️</div>
+
+            <h2>Apache Maven</h2>
+
+            <p>
+
+                Simplifies dependency management,
+                project lifecycle and application packaging.
+
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="icon">☕</div>
+
+            <h2>Java 21</h2>
+
+            <p>
+
+                Built using the latest Long Term Support (LTS)
+                version of Java for performance and reliability.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <a href="https://spring.io/projects/spring-boot" class="btn green-btn">
+
+            Spring Boot
+
+        </a>
+
+        <a href="https://maven.apache.org/" class="btn blue-btn">
+
+            Apache Maven
+
+        </a>
+
+    </div>
+
+    <footer>
+
+        <strong>Created by Amata Muthugama</strong><br>
+
+        University of Moratuwa<br><br>
+
+        Software Engineering Lab Assignment • 2026
+
+    </footer>
+
+</div>
+
+</body>
+</html>
